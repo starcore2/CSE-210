@@ -9,11 +9,17 @@ def main():
     pass
 
 def build_grid(cells):
+    try:
+        cells = int(cells)
+    except TypeError:
+        print("Invalid cell number")
+        return 0
     end_of_list=cells*cells
     i=0
+    grid = []
     while i<end_of_list:
-        pass
-
+        grid[i]=i+1
+    return grid
 def win(signs_needed):
     pass
 
