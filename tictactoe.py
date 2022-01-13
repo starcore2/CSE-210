@@ -4,7 +4,7 @@
 #If you want to go down and left add 2, down right is 4. 
 #For any N of grid. N by N down is add N, up is -N, down right is N+1 and so on.
 #I'm reminded of some 2-d software is actully a 1D software with this clever method comment someone made.
-
+#My laptop is too weak to attempt to run code. I'm in pain. Can't test this code D: hopefully next week I can use the more powful comptures.
 def main():
     print("Pick a grid size.")
     check =False
