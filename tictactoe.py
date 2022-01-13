@@ -8,7 +8,7 @@
 def main():
     print("Pick a grid size.")
     check =False
-    false=False
+    false=False #I keep forgetting to captiliz false and true multiple times. This is to prevent that simple bug.
     true=True
     winner = False
     grid=emptyGrid
@@ -38,12 +38,12 @@ def main():
             x=0
         y=0
         x=0
-        while move_result == -1 or check != True:
+        while check != True:
             if player_turn = 1:
                 player_turn = 0
                 print("It's players X turn.")
                 try:
-                    grid=(x,int(input("")),grid)
+                    grid=move(x,int(input("")),grid)
                     check = True
                 except:
                     print("Error, try again player one.")
@@ -52,7 +52,7 @@ def main():
                 player_turn =1
                 print("It's players X turn.")
                 try:
-                    grid=(x,int(input("")),grid)
+                    grid=move(x,int(input("")),grid)
                     check = True
                 except:
                     print("Error, try again player one.")
@@ -61,7 +61,8 @@ def main():
                 expected_turns = 0
                 print("Turn error happened, ending game.")
         if expected_turns <= victory_check_start:
-            victory_check(grid,cells,emptyGrid)
+            if victory_check(grid,cells,emptyGrid) == -2:
+                winner=True
         expected_turns-=1
         check = False
     if expected_turns == 0 and winner != True:
