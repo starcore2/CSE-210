@@ -12,7 +12,7 @@ def build_grid(cells):
     try:
         cells = int(cells)
     except TypeError:
-        print("Invalid cell number")
+        print("Invalid cell number type")
         return 0
     end_of_list=cells*cells
     i=0
@@ -20,8 +20,34 @@ def build_grid(cells):
     while i<end_of_list:
         grid[i]=i+1
     return grid
-def win(signs_needed):
-    pass
+
+def build_grid_edge(cells):
+    try:
+        cells = int(cells)
+    except TypeError:
+        print("Cell type error")
+        return 0
+    square=cells*cells
+    check = False
+    edge=[1]
+    edge+=cells
+    edge+=cells*cells-cells
+    edge+=cells*cells
+    i = 0
+    while check != True:
+        i+=1
+        if i > 10000:
+            check = True
+            print("Number was too big or unexpected error.")
+        
+
+def win(signs_needed, win_count):
+    x=signs_needed+" has won"
+    if win_count>1:
+        x+=" by {} lines.".format(win_count)
+    else:
+        x+="."
+    print(x)
 
 def draw():
     print("No one wins")
@@ -29,7 +55,7 @@ def draw():
 def move(sign, move, grid):
     pass
 
-def victory_check(grid):
+def victory_check(grid, edgegrid):
     pass
 
 

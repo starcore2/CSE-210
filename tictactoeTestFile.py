@@ -1,5 +1,5 @@
 import pytest
-from tictactoe import build_grid
+from tictactoe import build_grid;
 from pytest import approx
 
 def grid_build_test():
