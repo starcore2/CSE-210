@@ -9,7 +9,10 @@ def main():
     pass
 
 def build_grid(cells):
-    pass
+    end_of_list=cells*cells
+    i=0
+    while i<end_of_list:
+        pass
 
 def win(signs_needed):
     pass
@@ -17,12 +20,11 @@ def win(signs_needed):
 def draw():
     print("No one wins")
 
-def move(move, grid):
+def move(sign, move, grid):
     pass
 
-
-
-
+def victory_check(grid):
+    pass
 
 
 if __name__ == "__main__":
