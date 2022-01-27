@@ -1,0 +1,4 @@
+Hilo is a game of drawing and picking if the next card is higher or lower. 
+There will be two game modes of deck and aways random. 
+Deck will have 13 cards that get removed and not suffled back in until 3 cards are left.
+Aways random will auto put back in cards used.
