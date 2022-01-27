@@ -90,7 +90,7 @@ def main():
         x=0
         HighLow=""
         while HighLow == "":
-            HighLow = str(input("Pick High or Low [h/l]"))
+            HighLow = str(input("Pick High or Low [h/l]: "))
             HighLow = HighLow.casefold()
             if HighLow != 'h' or HighLow != 'l' or HighLow != 'high' or HighLow != 'low':
                 pass
@@ -114,7 +114,7 @@ def main():
         x=0
         cont = ""
         while cont == "" and score > 0:
-            cont = str(input("yes or no? [y/n]"))
+            cont = str(input("yes or no? [y/n]: "))
             if x>0:
                 print("warning if you don't pick yes or no the program will assume no after more attempts")
                 if x>20:
@@ -137,13 +137,12 @@ def main():
         if len(deck) < 13:
             deck = Deck()
             deck = deck.deckOfCards
-        else:
-            print(f"Your Last Card was {lastCard}")
+        print(f"Your Last Card was {lastCard}")
         print(f"Your current score is {score}")
         x=0
         HighLow=""
         while HighLow == "":
-            HighLow = str(input("Pick High or Low [h/l]"))
+            HighLow = str(input("Pick High or Low [h/l]: "))
             HighLow = HighLow.casefold()
             if HighLow != 'h' or HighLow != 'l' or HighLow != 'high' or HighLow != 'low':
                 pass
@@ -165,7 +164,7 @@ def main():
         x=0
         cont = ""
         while cont == "" and score > 0:
-            cont = str(input("yes or no? [y/n]"))
+            cont = str(input("yes or no? [y/n]: "))
             if x>0:
                 print("warning if you don't pick yes or no the program will assume no after more attempts")
                 if x>20:
